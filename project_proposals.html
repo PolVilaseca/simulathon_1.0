@@ -17,9 +17,6 @@
       padding: 2rem 0;
       text-align: center;
     }
-    .content-container {
-      display: block;
-    }
     article {
       background-color: #fff;
       padding: 2rem;
@@ -29,7 +26,7 @@
       max-width: 800px;
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 4rem; /* Increased spacing between sections */
     }
     h2 {
       border-bottom: 2px solid #e9ecef;
@@ -50,6 +47,14 @@
     li {
       margin-bottom: 0.5rem;
     }
+    /* Image styling for theme images */
+    .theme-img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 1rem auto;
+      border-radius: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -60,7 +65,8 @@
   <article>
     <!-- Theme A. Random Walks & Diffusion -->
     <section>
-      <h2>Theme A. Random Walks & Diffusion</h2>
+      <h2>Theme A. Random Walks &amp; Diffusion</h2>
+      <img src="./project_proposals_images/random_walks.png" alt="Random Walks & Diffusion" class="theme-img">
       <h4>A1. Random Walk and Brownian Motion</h4>
       <ul>
         <li>Simulate the movement of single or multiple random walkers on a grid.</li>
@@ -91,6 +97,7 @@
     <!-- Theme B. Network Models & Graph Theory -->
     <section>
       <h2>Theme B. Network Models & Graph Theory</h2>
+      <img src="./project_proposals_images/network_models.png" alt="Network Models & Graph Theory" class="theme-img">
       <h4>B1. Diffusion on Graphs (PageRank Algorithm)</h4>
       <ul>
         <li>Simulate a random walker traversing a network to approximate Google’s PageRank.</li>
@@ -116,6 +123,7 @@
     <!-- Theme C. Fluid, Waves & Heat Transfer -->
     <section>
       <h2>Theme C. Fluid, Waves & Heat Transfer</h2>
+      <img src="./project_proposals_images/fluids.png" alt="Fluid, Waves & Heat Transfer" class="theme-img">
       <h4>C1. Heat Conduction in a 2D Grid</h4>
       <ul>
         <li>Simulate the heat equation on a discrete lattice.</li>
@@ -144,6 +152,7 @@
     <!-- Theme D. Material Science & Pattern Formation -->
     <section>
       <h2>Theme D. Material Science & Pattern Formation</h2>
+      <img src="./project_proposals_images/materials.png" alt="Material Science & Pattern Formation" class="theme-img">
       <h4>D1. Active Matter and Swarming Behavior</h4>
       <ul>
         <li>Simulate self-propelled particles (like birds, bacteria, or fish) following simple local rules.</li>
@@ -178,6 +187,7 @@
     <!-- Theme E. Social Dynamics & Game Theory -->
     <section>
       <h2>Theme E. Social Dynamics & Game Theory</h2>
+      <img src="./project_proposals_images/social_dynamics.png" alt="Social Dynamics & Game Theory" class="theme-img">
       <h4>E1. Simulating the Monty Hall Problem</h4>
       <ul>
         <li>Create an interactive simulation of the classic Monty Hall game.</li>
@@ -237,6 +247,7 @@
     <!-- Theme F. Complex & Chaotic Systems -->
     <section>
       <h2>Theme F. Complex & Chaotic Systems</h2>
+      <img src="./project_proposals_images/complex_systems.png" alt="Complex & Chaotic Systems" class="theme-img">
       <h4>F1. Bifurcation Diagrams for the Logistic Map (Chaos Theory)</h4>
       <ul>
         <li>Simulate the logistic map using <em>x<sub>n+1</sub> = r&nbsp;x<sub>n</sub>(1 - x<sub>n</sub>)</em>.</li>
@@ -260,6 +271,7 @@
     <!-- Theme G. Quantum & Gravitational Phenomena -->
     <section>
       <h2>Theme G. Quantum & Gravitational Phenomena</h2>
+      <img src="./project_proposals_images/gravity.png" alt="Quantum & Gravitational Phenomena" class="theme-img">
       <h4>G1. Planetary Orbits and N-Body Gravity Simulation</h4>
       <ul>
         <li>Implement Newtonian gravity for multiple bodies, including planets, moons, and asteroids.</li>
