@@ -34,11 +34,24 @@
       box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
       max-width: 800px;
     }
+    section {
+      margin-bottom: 2rem;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
     h2 {
       border-bottom: 2px solid #e9ecef;
       padding-bottom: 0.5rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
     }
   </style>
   <script>
@@ -216,7 +229,7 @@
         <p>
           The finalized applets must be sent to
           <a href="mailto:simulathon@gmail.com">simulathon@gmail.com</a>
-          before April 27th at 17:00. Each submission must contain:
+          before April 27th at 17:00. Each submission must include:
         </p>
         <ul>
           <li>Applet name,</li>
@@ -258,9 +271,9 @@
         <img src="vibe_coding.png" alt="Imatge de Vibe Coding" class="img-fluid my-3 rounded">
       </section>
 
-      <!-- Project Examples Section in Catalan -->
+      <!-- Project Examples Section -->
       <section>
-        <h2>Exemples de Projectes</h2>
+        <h2>Project Examples</h2>
         <p>
           Els participants construiran aplicacions de simulació senzilles que exploren sistemes de diferents camps, com ara la física, les matemàtiques, l'ecologia, la teoria dels jocs, etc. Per exemple, podríeu simular gasos en una caixa, crear patrons interessants utilitzant les matemàtiques, modelar interaccions depredador-presa o simular jocs d'estratègia bàsics. L'objectiu és fer que idees complexes siguin fàcils i divertides de veure en acció.
         </p>
@@ -418,17 +431,17 @@
         <p>
           <a href="https://en.wikipedia.org/wiki/Vibe_coding#:~:text=Vibe%20coding%20(also%20vibecoding)%20is,shuffle%20a%20deck%20of%20cards.%22" target="_blank">
             Vibe coding
-          </a> es un enfoque de programación que depende en gran medida de la asistencia de la IA, donde los desarrolladores describen la funcionalidad deseada en lenguaje natural y luego permiten que una IA genere código basándose en sus instrucciones.
+          </a> es un enfoque de programación que depende en gran medida de la asistencia de la IA, en el que los desarrolladores describen la funcionalidad deseada en lenguaje natural y luego permiten que una IA genere código basándose en sus instrucciones.
           En lugar de escribir código directamente, el programador se enfoca en dar indicaciones a la IA, probar el resultado y refinar el código según sea necesario.
         </p>
         <img src="vibe_coding.png" alt="Imagen de Vibe Coding" class="img-fluid my-3 rounded">
       </section>
 
-      <!-- Project Examples Section in Spanish -->
+      <!-- Project Examples Section -->
       <section>
-        <h2>Ejemplos de Proyectos</h2>
+        <h2>Project Examples</h2>
         <p>
-          Los participantes construirán pequeñas applets de simulación que exploran sistemas de diferentes campos, como la física, las matemáticas, la ecología, la teoría de juegos, etc. Por ejemplo, podrías simular gases en una caja, crear patrones geniales usando matemáticas, modelar interacciones depredador-presa o simular juegos de estrategia básicos. El objetivo es hacer que las ideas complejas sean fáciles y divertidas de ver en acción.
+          Los participantes construirán pequeñas aplicaciones de simulación que exploran sistemas de diferentes campos de la física, las matemáticas, la ecología, la teoría de juegos, etc. Por ejemplo, podrías simular gases en una caja, crear patrones interesantes usando matemáticas, modelar interacciones depredador-presa o simular juegos de estrategia básicos. El objetivo es hacer que ideas complejas sean fáciles y divertidas de ver en acción.
         </p>
         <ul>
           <li><a href="https://polvilaseca.github.io/applet_gallery/" target="_blank">Galería de ejemplos</a></li>
@@ -440,8 +453,7 @@
       <section>
         <h2>Modelos a Utilizar:</h2>
         <p>
-          Para este hackathon, podéis utilizar cualquier modelo de lenguaje (LLM) adecuado para tareas de programación.
-          Por razones prácticas, recomendamos usar <strong>Google’s Gemini</strong> o la familia de modelos de <strong>OpenAI’s GPT</strong>.
+          Para este hackathon, podéis utilizar cualquier LLM adecuado para tareas de programación. Por razones prácticas, os recomendamos utilizar <strong>Google’s Gemini</strong> o la familia de modelos de <strong>OpenAI’s GPT</strong>.
           Estos ofrecen interfaces web muy convenientes y fáciles de usar, capacidades multimodales y una usabilidad razonable dentro de sus niveles gratuitos.
           También podéis utilizar <strong>Anthropic’s Claude Sonet 3.7</strong>. En particular:
         </p>
@@ -453,11 +465,11 @@
         <ul>
           <li><strong>GPT4o</strong>: muy bueno para tareas de programación, con límites de uso sujetos al tráfico del servidor y a las solicitudes diarias (detalles no especificados).</li>
           <li><strong>GPT4o-mini</strong>: adecuado para tareas de programación, comparable a Gemini 2.5 Flash. Se convierte en el modelo predeterminado una vez se alcancen los límites de GPT4o.</li>
-          <li><strong>Claude Sonet 3.7</strong>: excelente para la programación (favorito de la comunidad), aunque los límites del nivel gratuito (ventana de contexto y solicitudes por día) no están claros.</li>
+          <li><strong>Claude Sonet 3.7</strong>: excelente para la programación (favorito de la comunidad), aunque los límites del nivel gratuito (ventana de contexto y solicitudes diarias) no están claros.</li>
         </ul>
         <h4>Para asegurar el mejor flujo de trabajo, podéis:</h4>
         <ul>
-          <li>Usar los modelos "lite" (Flash y Mini) para <strong>explorar y prototipar</strong> conceptos sin consumir los límites de uso de los modelos completos.</li>
+          <li>Utilizar los modelos "lite" (Flash y Mini) para <strong>explorar y prototipar</strong> conceptos sin consumir los límites de uso de los modelos completos.</li>
           <li>Cambiar a los modelos completos para un <strong>desarrollo adecuado</strong> de la aplicación.</li>
           <li>Alternativamente, podéis obtener una <em>prueba gratuita de 1 mes</em> de Gemini 2.5 Pro (creando una cuenta dummy de Google para obtener dicha prueba).</li>
         </ul>
@@ -516,10 +528,10 @@
         <ul>
           <li>Una vez finalizado, <strong>subidlo a un repositorio de GitHub</strong>.</li>
           <li>
-            Configurad <strong>GitHub Pages</strong> para ese repositorio:
+            Configura <strong>GitHub Pages</strong> para ese repositorio:
             <ul>
               <li>Id a Settings/Pages.</li>
-              <li>En Build and Deployment, seleccionad Branch "main".</li>
+              <li>En Build and Deployment, selecciona Branch "main".</li>
             </ul>
           </li>
         </ul>
@@ -542,20 +554,20 @@
         </ul>
       </section>
 
-      <!-- Entregables Section -->
+      <!-- Deliverables Section -->
       <section>
-        <h2>Entregables:</h2>
+        <h2>Deliverables:</h2>
         <p>
-          Las aplicaciones finalizadas deben enviarse a
+          The finalized applets must be sent to
           <a href="mailto:simulathon@gmail.com">simulathon@gmail.com</a>
-          antes del 27 de abril a las 17:00. Cada envío debe incluir:
+          before April 27th at 17:00. Each submission must include:
         </p>
         <ul>
-          <li>Nombre de la aplicación,</li>
-          <li>Nombres de los participantes,</li>
-          <li>Icona de la aplicació,</li>
-          <li>Enllaç a la pàgina on l'aplicació està hostejada,</li>
-          <li>Enllaç al repositori de GitHub.</li>
+          <li>Applet name,</li>
+          <li>Names of participants,</li>
+          <li>Applet icon,</li>
+          <li>Link to the page where the applet is hosted,</li>
+          <li>Link to the GitHub repository.</li>
         </ul>
       </section>
     </article>
