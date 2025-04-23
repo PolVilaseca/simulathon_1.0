@@ -14,10 +14,11 @@
     header {
       background-color: #343a40;
       color: #fff;
-      padding: 1rem 0;
+      padding: 2rem 0;
+      text-align: center;
     }
     #language-selector button {
-      margin-left: 0.5rem;
+      margin: 0 0.25rem;
     }
     .content-container {
       display: none;
@@ -42,27 +43,24 @@
   </style>
   <script>
     function switchLanguage(lang) {
-      // Hide all language containers first
       document.querySelectorAll('.content-container').forEach(function(el) {
         el.classList.remove('active');
       });
-      // Show the requested language container
       document.getElementById('content-' + lang).classList.add('active');
     }
-    // Set default language to English after page loads
     document.addEventListener("DOMContentLoaded", function() {
       switchLanguage('en');
     });
   </script>
 </head>
 <body>
-  <header class="text-center">
-    <h1>Hackathon Instructions</h1>
+  <header>
+    <h1 class="mb-3">Hackathon Instructions</h1>
     <!-- Language Selector -->
-    <div id="language-selector">
-      <button class="btn btn-outline-light btn-language" onclick="switchLanguage('en')">English</button>
-      <button class="btn btn-outline-light btn-language" onclick="switchLanguage('ca')">Català</button>
-      <button class="btn btn-outline-light btn-language" onclick="switchLanguage('es')">Español</button>
+    <div id="language-selector" class="mb-3">
+      <button class="btn btn-outline-light" onclick="switchLanguage('en')">English</button>
+      <button class="btn btn-outline-light" onclick="switchLanguage('ca')">Català</button>
+      <button class="btn btn-outline-light" onclick="switchLanguage('es')">Español</button>
     </div>
   </header>
 
@@ -73,7 +71,7 @@
       <section>
         <h2>Welcome!</h2>
         <p>
-          Welcome to the <strong>Simulation 1.0</strong>! We’re thrilled to have you here.
+          Welcome to the <strong>Simulathon 1.0</strong>! We’re thrilled to have you here.
           On this page, you’ll find the key information, resources, and guidelines for the event.
           Please read through it carefully to ensure a smooth and productive hacking experience.
         </p>
@@ -103,7 +101,7 @@
         </p>
         <ul>
           <li><a href="https://polvilaseca.github.io/applet_gallery/" target="_blank">Gallery of examples</a></li>
-          <li><a href="https://polvilaseca.github.io/simulathon_proposals/" target="_blank">Project proposals</a></li>
+          <li><a href="project_proposals.html" target="_blank">Project proposals</a></li>
         </ul>
       </section>
 
@@ -238,7 +236,7 @@
       <section>
         <h2>Benvinguts!</h2>
         <p>
-          Benvinguts a la <strong>Simulation 1.0</strong>! Estem encantats de tenir-vos aquí.
+          Benvinguts a la <strong>Simulathon 1.0</strong>! Estem encantats de tenir-vos aquí.
           En aquesta pàgina trobareu la informació clau, els recursos i les directrius per a l'esdeveniment.
           Llegiu-ho amb atenció per assegurar una experiència de hackeig fluida i productiva.
         </p>
@@ -268,7 +266,7 @@
         </p>
         <ul>
           <li><a href="https://polvilaseca.github.io/applet_gallery/" target="_blank">Galeria d'exemples</a></li>
-          <li><a href="https://polvilaseca.github.io/simulathon_proposals/" target="_blank">Propostes de projectes</a></li>
+          <li><a href="project_proposals.html" target="_blank">Propostes de projectes</a></li>
         </ul>
       </section>
 
@@ -404,7 +402,7 @@
       <section>
         <h2>¡Bienvenidos!</h2>
         <p>
-          ¡Bienvenidos a la <strong>Simulation 1.0</strong>! Estamos encantados de teneros aquí.
+          ¡Bienvenidos a la <strong>Simulathon 1.0</strong>! Estamos encantados de teneros aquí.
           En esta página encontraréis la información clave, los recursos y las directrices para el evento.
           Por favor, leedla detenidamente para asegurar una experiencia de hackeo fluida y productiva.
         </p>
@@ -434,7 +432,7 @@
         </p>
         <ul>
           <li><a href="https://polvilaseca.github.io/applet_gallery/" target="_blank">Galería de ejemplos</a></li>
-          <li><a href="https://polvilaseca.github.io/simulathon_proposals/" target="_blank">Propuestas de proyectos</a></li>
+          <li><a href="project_proposals.html" target="_blank">Propuestas de proyectos</a></li>
         </ul>
       </section>
 
@@ -502,7 +500,7 @@
           <li>Cread un <strong>prompt que describa con detalle y precisión</strong> todo lo que debe implementarse en una iteración determinada.</li>
           <li>Indicad al modelo que la salida <strong>debe estar codificada en JavaScript</strong>.</li>
           <li>Copiad la salida del modelo y guardadla en un archivo llamado <strong>index.html</strong>.</li>
-          <li>Haced doble clic en ese archivo para ejecutarlo en vuestro navegador web.</li>
+          <li>Haced doble clic en ese archivo para ejecutarlo en vuestro navegador.</li>
           <li>
             Si el proyecto crece, es conveniente <strong>dividir el archivo en 3</strong> archivos:
             <ul>
