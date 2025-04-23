@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Proposals</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #343a40;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    #language-selector button {
+      margin: 0 0.25rem;
+    }
+    .content-container {
+      display: none;
+    }
+    .content-container.active {
+      display: block;
+    }
+    article {
+      background-color: #fff;
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+      max-width: 800px;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    /* Update idea titles to appear like regular text */
+    h4 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('.content-container').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.getElementById('content-' + lang).classList.add('active');
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      switchLanguage('en');
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="mb-3">Project Proposals</h1>
+    <!-- Language Selector -->
+    <div id="language-selector" class="mb-3">
+      <button class="btn btn-outline-light" onclick="switchLanguage('en')">English</button>
+      <button class="btn btn-outline-light" onclick="switchLanguage('ca')">Català</button>
+      <button class="btn btn-outline-light" onclick="switchLanguage('es')">Español</button>
+    </div>
+  </header>
+
+  <!-- English Content -->
+  <div id="content-en" class="content-container">
+    <article>
+      <!-- Theme A. Random Walks & Diffusion -->
+      <section>
+        <h2>Theme A. Random Walks &amp; Diffusion</h2>
+        <h4>A1. Random Walk and Brownian Motion</h4>
+        <ul>
+          <li>Simulate the movement of single or multiple random walkers on a grid.</li>
+          <li>Visualize diffusion and estimate first-passage times.</li>
+          <li>Demonstrate the statistical nature of random motion.</li>
+        </ul>
+        <h4>A2. Monte Carlo Pi Estimation</h4>
+        <ul>
+          <li>Simulate random point sampling inside a square to estimate π.</li>
+          <li>Compare the convergence speed of Monte Carlo methods with deterministic approaches.</li>
+          <li>Visualize how increasing the sample size refines the estimate.</li>
+        </ul>
+        <h4>A3. Self-Avoiding Random Walks (Polymer Models)</h4>
+        <ul>
+          <li>Simulate a random walker that cannot cross its own path, mimicking polymer chains.</li>
+          <li>Compare the shortest path versus the longest surviving trajectories.</li>
+          <li>Study scaling laws and relate the behavior to percolation theory.</li>
+        </ul>
+        <h4>A4. Quantum Walk Simulation</h4>
+        <ul>
+          <li>Develop a quantum mechanical analogue of a random walk.</li>
+          <li>Illustrate how quantum superposition and interference affect the probability distribution.</li>
+          <li>Compare the ballistic spread of a quantum walk with the diffusive nature of classical random walks.</li>
+        </ul>
+        <h4>A5. Diffusion-Limited Aggregation (DLA)</h4>
+        <ul>
+          <li>Create a particle-based simulation where free-moving particles stick upon contact with a cluster.</li>
+          <li>Model natural fractal growth processes such as lightning or coral formation.</li>
+          <li>Investigate how simple random processes can lead to complex, branched structures.</li>
+        </ul>
+      </section>
+
+      <!-- Theme B. Network Models & Graph Theory -->
+      <section>
+        <h2>Theme B. Network Models &amp; Graph Theory</h2>
+        <h4>B1. Diffusion on Graphs (PageRank Algorithm)</h4>
+        <ul>
+          <li>Simulate a random walker traversing a network to approximate Google’s PageRank.</li>
+          <li>Apply the algorithm to social networks or web graphs.</li>
+          <li>Compare the relative “importance” of nodes based on their connectivity.</li>
+        </ul>
+        <h4>B2. Percolation Theory</h4>
+        <ul>
+          <li>Create a grid-based simulation to demonstrate how connectivity emerges as occupied sites increase.</li>
+          <li>Identify the critical percolation threshold where a spanning cluster forms.</li>
+          <li>Visualize the formation of clusters across the grid.</li>
+        </ul>
+        <h4>B3. Percolation and Epidemic Spreading on Complex Networks</h4>
+        <ul>
+          <li>Extend classical percolation concepts to simulate spreading processes on realistic networks.</li>
+          <li>Model how a virus or information spreads on scale-free or small-world networks.</li>
+          <li>Analyze the formation of large connected clusters that can trigger outbreaks.</li>
+        </ul>
+        <h4>B4. Disease Spread Simulation</h4>
+        <ul>
+          <li>Develop a stochastic SIR (Susceptible-Infected-Recovered) model with customizable infection rates.</li>
+          <li>Simulate how diseases spread through different network structures.</li>
+          <li>Evaluate the impact of interventions such as quarantine or vaccination on epidemic dynamics.</li>
+        </ul>
+        <h4>B5. Epidemic Threshold in Complex Networks</h4>
+        <ul>
+          <li>Simulate epidemic models on various network topologies.</li>
+          <li>Compare epidemic thresholds among random, small-world, and scale-free graphs.</li>
+          <li>Test and visualize how different vaccination strategies can contain outbreaks.</li>
+        </ul>
+        <h4>B6. Network Growth and Preferential Attachment</h4>
+        <ul>
+          <li>Simulate the emergence of scale-free networks using the Barabási-Albert model.</li>
+          <li>Demonstrate how nodes acquire connections preferentially, forming hubs.</li>
+          <li>Compare the resulting network structure with other growth mechanisms.</li>
+        </ul>
+      </section>
+
+      <!-- Theme C. Fluid, Waves & Heat Transfer -->
+      <section>
+        <h2>Theme C. Fluid, Waves &amp; Heat Transfer</h2>
+        <h4>C1. Heat Conduction in a 2D Grid</h4>
+        <ul>
+          <li>Solve the heat equation on a discrete lattice.</li>
+          <li>Visualize how heat diffuses from a hot source over time.</li>
+          <li>Implement different materials by varying thermal conductivity.</li>
+        </ul>
+        <h4>C2. Cellular Automata for Fluid Dynamics</h4>
+        <ul>
+          <li>Implement a lattice gas model (such as HPP or FHP) to simulate basic fluid flows.</li>
+          <li>Visualize how simple, local collision rules lead to macroscopic fluid behavior.</li>
+          <li>Experiment with obstacles and various boundary conditions.</li>
+        </ul>
+        <h4>C3. Lattice Gas Automata for Traffic Flow</h4>
+        <ul>
+          <li>Simulate cars moving on a highway according to simple traffic rules.</li>
+          <li>Implement the Nagel-Schreckenberg model to explore traffic jams and phase transitions.</li>
+          <li>Include features such as traffic signals and variable speed limits to observe their effects.</li>
+        </ul>
+        <h4>C4. Wave Propagation on a Lattice</h4>
+        <ul>
+          <li>Simulate the propagation of waves by solving the discrete wave equation on a grid.</li>
+          <li>Visualize phenomena such as interference, diffraction, and the formation of standing waves.</li>
+          <li>Adjust boundary conditions to see different propagation modes.</li>
+        </ul>
+      </section>
+
+      <!-- Theme D. Material Science & Pattern Formation -->
+      <section>
+        <h2>Theme D. Material Science &amp; Pattern Formation</h2>
+        <h4>D1. Active Matter and Swarming Behavior</h4>
+        <ul>
+          <li>Simulate self-propelled particles (like birds, bacteria, or fish) following simple local rules.</li>
+          <li>Implement models such as the Vicsek model or Boid flocking to observe collective motion.</li>
+          <li>Explore transitions between ordered and disordered states by adjusting noise and interaction radius.</li>
+        </ul>
+        <h4>D2. Ising Model Simulation</h4>
+        <ul>
+          <li>Develop a 2D Ising model with adjustable temperature and external field.</li>
+          <li>Explore phase transitions and magnetization behavior resulting from local spin interactions.</li>
+          <li>Study how microscopic rules yield distinct macroscopic states.</li>
+        </ul>
+        <h4>D3. Reaction-Diffusion Systems (Turing Patterns)</h4>
+        <ul>
+          <li>Simulate the interplay of diffusing chemical concentrations that react to form complex patterns.</li>
+          <li>Implement models such as the Gray-Scott or FitzHugh-Nagumo equations.</li>
+          <li>Model pattern formation found in animal skins, vegetation patterns, or cell differentiation.</li>
+        </ul>
+        <h4>D4. Granular Material and Sandpile Dynamics</h4>
+        <ul>
+          <li>Simulate avalanches, piling, and jamming in granular materials using cellular automata.</li>
+          <li>Use self-organized criticality models like the Bak-Tang-Wiesenfeld sandpile.</li>
+          <li>Examine how factors such as friction and angle of repose affect behavior.</li>
+        </ul>
+        <h4>D5. Growth of Crystals and Snowflakes</h4>
+        <ul>
+          <li>Model crystal formation based on rules of molecular attachment.</li>
+          <li>Use diffusion-limited aggregation with anisotropic rules to generate sixfold snowflake structures.</li>
+          <li>Explore symmetry and pattern formation in natural crystal growth.</li>
+        </ul>
+        <h4>D6. Fracture and Crack Propagation in Materials</h4>
+        <ul>
+          <li>Simulate how cracks initiate and propagate in solid materials under stress.</li>
+          <li>Employ spring-mass networks or finite element methods to capture fracture mechanics.</li>
+          <li>Compare brittle and ductile failure modes through varying material properties.</li>
+        </ul>
+      </section>
+
+      <!-- Theme E. Social Dynamics & Game Theory -->
+      <section>
+        <h2>Theme E. Social Dynamics &amp; Game Theory</h2>
+        <h4>E1. Simulating the Monty Hall Problem</h4>
+        <ul>
+          <li>Create an interactive simulation of the classic Monty Hall game.</li>
+          <li>Show the probability distributions when players choose to switch or stay with their initial choice.</li>
+          <li>Extend the simulation to handle more doors or scenarios with partial information.</li>
+        </ul>
+        <h4>E2. Conway’s Game of Life with Variable Rules</h4>
+        <ul>
+          <li>Extend the classic Game of Life by allowing tunable birth/survival rules and lattice geometries.</li>
+          <li>Introduce stochastic elements and asymmetric reproduction probabilities.</li>
+          <li>Observe the emergence of persistent structures and chaotic behavior.</li>
+        </ul>
+        <h4>E3. Prisoner’s Dilemma on a Lattice (Evolutionary Game Theory)</h4>
+        <ul>
+          <li>Simulate how cooperation evolves when agents play the Prisoner’s Dilemma with their neighbors.</li>
+          <li>Examine how defectors and cooperators spread on a 2D grid.</li>
+          <li>Incorporate mutation and selection to allow strategy evolution over time.</li>
+        </ul>
+        <h4>E4. The Voting Paradox and Condorcet Cycles</h4>
+        <ul>
+          <li>Simulate a ranked-choice voting system with multiple candidates.</li>
+          <li>Demonstrate how Condorcet cycles occur, where no candidate is universally preferred.</li>
+          <li>Compare various voting systems such as plurality, runoff, and Borda count.</li>
+        </ul>
+        <h4>E5. The Traveling Salesperson Problem (TSP) with Heuristics</h4>
+        <ul>
+          <li>Simulate and visualize heuristic algorithms (e.g., nearest neighbor, simulated annealing) for approximating the shortest route.</li>
+          <li>Compare solution efficiency versus optimality across different methods.</li>
+          <li>Allow customization of city layouts and parameters.</li>
+        </ul>
+        <h4>E6. Braess’ Paradox in Traffic Networks</h4>
+        <ul>
+          <li>Simulate the counterintuitive scenario where adding a road to a network leads to worse overall traffic flow due to selfish routing.</li>
+          <li>Compare network equilibrium flows with and without the extra road.</li>
+          <li>Illustrate real-world traffic scenarios to highlight the paradox.</li>
+        </ul>
+        <h4>E7. Agent-Based Market Simulation (Supply and Demand)</h4>
+        <ul>
+          <li>Model a marketplace where buyers and sellers adjust prices dynamically.</li>
+          <li>Implement various pricing strategies such as random, greedy, and auction-based approaches.</li>
+          <li>Observe how equilibrium prices emerge from the aggregate behavior of individual agents.</li>
+        </ul>
+        <h4>E8. Network-Based Wealth Distribution (Pareto vs. Gaussian)</h4>
+        <ul>
+          <li>Simulate wealth exchange among agents using models analogous to ideal gas dynamics.</li>
+          <li>Study how wealth distributions evolve toward Gaussian or power-law (Pareto) profiles.</li>
+          <li>Experiment with redistribution policies such as taxation.</li>
+        </ul>
+        <h4>E9. The Rock-Paper-Scissors Ecosystem (Cyclic Competition)</h4>
+        <ul>
+          <li>Model cyclic competition among three species (or groups) using rock-paper-scissors dynamics.</li>
+          <li>Incorporate spatial interactions on a grid to observe pattern formation and traveling waves.</li>
+          <li>Analyze conditions that can lead to periodic extinctions or sustained coexistence.</li>
+        </ul>
+      </section>
+
+      <!-- Theme F. Complex & Chaotic Systems -->
+      <section>
+        <h2>Theme F. Complex &amp; Chaotic Systems</h2>
+        <h4>F1. Bifurcation Diagrams for the Logistic Map (Chaos Theory)</h4>
+        <ul>
+          <li>Simulate the logistic map using <em>x<sub>n+1</sub> = r x<sub>n</sub>(1 - x<sub>n</sub>)</em>.</li>
+          <li>Show how varying the parameter r leads to period-doubling bifurcations and chaos.</li>
+          <li>Visualize the evolution of attractors and the overall bifurcation diagram.</li>
+        </ul>
+        <h4>F2. Predator-Prey Dynamics (Lotka-Volterra Model)</h4>
+        <ul>
+          <li>Implement coupled differential equations to model prey-predator interactions.</li>
+          <li>Introduce stochasticity or spatial variations to explore oscillatory dynamics.</li>
+          <li>Analyze stability conditions that result in persistent cycles or population collapse.</li>
+        </ul>
+        <h4>F3. The Kardar-Parisi-Zhang (KPZ) Surface Growth Model</h4>
+        <ul>
+          <li>Model the stochastic growth of surfaces (e.g., bacterial colonies or fluid fronts) using the KPZ framework.</li>
+          <li>Compare results with simpler random deposition models.</li>
+          <li>Observe how surface roughness scales with time and system size.</li>
+        </ul>
+        <h4>F4. The Arrow of Time and Entropy Growth</h4>
+        <ul>
+          <li>Simulate a system of gas particles in a box starting from a low-entropy, ordered configuration.</li>
+          <li>Demonstrate how entropy increases as the particles disperse irreversibly.</li>
+          <li>Allow system resets to highlight the statistical improbability of entropy decrease.</li>
+        </ul>
+      </section>
+
+      <!-- Theme G. Quantum & Gravitational Phenomena -->
+      <section>
+        <h2>Theme G. Quantum &amp; Gravitational Phenomena</h2>
+        <h4>G1. Planetary Orbits and N-Body Gravity Simulation</h4>
+        <ul>
+          <li>Implement Newtonian gravity for multiple bodies, including planets, moons, and asteroids.</li>
+          <li>Visualize orbital dynamics, including chaotic trajectories and resonances.</li>
+          <li>Explore concepts like Lagrange points and orbital stability.</li>
+        </ul>
+        <h4>G2. Quantum Tunneling and the Schrödinger Equation</h4>
+        <ul>
+          <li>Simulate the evolution of a quantum wavefunction encountering a potential barrier.</li>
+          <li>Visualize the probability density before and after tunneling.</li>
+          <li>Compare classical expectations with quantum mechanical outcomes.</li>
+        </ul>
+      </section>
+
+      <!-- Deliverables Section -->
+      <section>
+        <h2>Deliverables:</h2>
+        <p>
+          The finalized project proposals must be submitted to
+          <a href="mailto:simulathon@gmail.com">simulathon@gmail.com</a>
+          before April 27th at 17:00. Each submission must include:
+        </p>
+        <ul>
+          <li>Project title,</li>
+          <li>List of participants,</li>
+          <li>Brief description of the proposal,</li>
+          <li>Link to a demo (if available),</li>
+          <li>Link to a GitHub repository (if applicable).</li>
+        </ul>
+      </section>
+    </article>
+  </div>
+
+  <!-- Bootstrap JS (optional for interactive components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
